@@ -349,8 +349,8 @@ http://localhost/Tradia/PHP/index.php
 
 ## Contact · Contacto
 
-### Made by **José Gil Ramírez Onofre**
-### Hecho por **José Gil Ramírez Onofre**
+
+### Hecho por  |  Made by    **José Gil Ramírez Onofre**
 
 <br>
 
