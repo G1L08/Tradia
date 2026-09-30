@@ -1,0 +1,440 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --color-primary: #1e3a8a;
+    --color-text: #333;
+    --color-star: #f59e0b;
+    --color-background-light: #f4f4f4;
+    --color-border: #ccc;
+    --color-danger: #d9534f;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #fff;
+    color: var(--color-text);
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 20px;
+    border-bottom: 1px solid var(--color-border);
+    position: relative;
+}
+
+.header h1 {
+    font-size: 1.5em;
+    font-weight: 700;
+    margin: 0;
+}
+
+.header h2 {
+    font-size: 0.9em; 
+    color: var(--primary-color); 
+    font-family: 'Verdana', sans-serif; 
+    letter-spacing: 0.5px;
+    font-weight: 600; 
+}
+.menu-icon {
+    position: absolute;
+    left: 20px;
+    font-size: 1.2em;
+}
+
+.btn-agregar, .btn-salir, .btn-carrito-view {
+    position: absolute;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.btn-agregar { right: 80px; background-color: var(--color-primary); color: white; }
+.btn-agregar a { color: white; text-decoration: none; }
+
+.btn-salir { right: 20px; background-color: var(--color-danger); color: white; }
+.btn-salir a { color: white; text-decoration: none; }
+
+.btn-carrito-view { left: 20px; background-color: #fff; border: 1px solid var(--color-primary); color: var(--color-primary); }
+.btn-carrito-view a { color: var(--color-primary); text-decoration: none; }
+
+.banner {
+    padding: 20px 0;
+}
+
+.banner-content {
+    background-color: var(--color-primary);
+    color: #fff;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    border-radius: 4px; 
+}
+
+.banner-text h2 {
+    font-size: 2em;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.btn-primary {
+    background-color: #fff;
+    color: var(--color-primary);
+    border: 1px solid var(--color-primary); 
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #f0f0f0;
+}
+
+
+.modal-actions .btn-primary {
+    background-color: var(--color-primary);
+    color: white;
+    border: none;
+}
+.modal-actions .btn-primary:hover {
+    background-color: #1c1d22;
+}
+
+.banner-avatar {
+    font-size: 3em;
+    opacity: 0.7;
+}
+
+.product-grid-container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 20px; 
+    justify-content: flex-start;
+}
+
+.empty-message {
+    width: 100%;
+    text-align: center;
+    padding: 50px 0;
+    font-size: 1.2em;
+    color: #777;
+}
+
+.product-card {
+    width: 100%; 
+    max-width: 280px; 
+    border: 1px solid var(--color-border);
+    border-radius: 8px; 
+    overflow: hidden;
+    padding: 15px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: white;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.product-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.product-header {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    z-index: 2;
+}
+
+.favorite-icon {
+    color: #fff; 
+    font-size: 1.2em;
+    text-shadow: 0 0 2px #333; 
+    cursor: pointer;
+}
+
+.product-image-container {
+    width: 100%;
+    height: 200px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+
+.product-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; 
+    border-radius: 4px;
+}
+
+.product-image-container img[src*="placeholder"] {
+    background-color: var(--color-background-light);
+    content: "Imagen de Producto";
+    color: #999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.product-info {
+    padding-top: 5px;
+}
+
+.product-name {
+    font-size: 1em;
+    font-weight: 600;
+    margin-bottom: 5px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    height: 2.4em; 
+}
+
+.product-rating {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.stars {
+    color: var(--color-star);
+    font-size: 0.8em;
+    margin-right: 5px;
+}
+
+.reviews {
+    font-size: 0.8em;
+    color: #777;
+}
+
+.btn-secondary {
+    background-color: #fff;
+    color: var(--color-text);
+    border: 1px solid var(--color-border);
+    padding: 8px 0;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+    width: 100%;
+    margin-top: 10px;
+    transition: background-color 0.2s;
+}
+
+.btn-secondary:hover {
+    background-color: var(--color-background-light);
+}
+
+@media (min-width: 600px) {
+    .product-grid-container {
+        justify-content: space-between;
+    }
+    .product-card {
+        width: calc(50% - 10px); 
+        max-width: none;
+    }
+}
+
+@media (min-width: 992px) {
+    .product-card {
+        width: calc(25% - 15px); 
+    }
+}
+
+.product-price-container {
+    display: flex; 
+    align-items: center;
+    gap: 8px; 
+    height: 25px; 
+}
+
+.precio-original {
+    color: #888; 
+    font-size: 0.9em;
+    text-decoration: line-through;
+}
+
+.precio-descuento {
+    color: var(--color-danger); 
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.etiqueta-descuento, .badge-descuento {
+    background-color: var(--color-danger);
+    color: white;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-size: 0.75em;
+    font-weight: bold;
+}
+
+.product-price, .precio-normal {
+    font-size: 1.1em;
+    font-weight: 700;
+    color: var(--color-text);
+}
+
+
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.6); 
+    backdrop-filter: blur(4px); 
+    animation: fadeIn 0.3s;
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 90%; 
+    max-width: 1000px;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+    display: flex; 
+    position: relative;
+    overflow: hidden;
+}
+
+.close-btn {
+    color: #aaa;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 1010;
+    transition: color 0.2s;
+}
+
+.close-btn:hover {
+    color: #333;
+}
+
+.modal-body {
+    display: flex;
+    width: 100%;
+}
+
+.modal-left {
+    width: 45%;
+    padding: 30px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-right: 1px solid #eee;
+}
+
+.modal-left img {
+    max-width: 100%;
+    max-height: 450px;
+    object-fit: contain;
+}
+
+.modal-right {
+    width: 55%;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.modal-brand {
+    color: var(--color-primary);
+    font-size: 0.9em;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.modal-title {
+    font-size: 1.8em;
+    font-weight: 600;
+    line-height: 1.2;
+    color: #333;
+    margin: 0;
+}
+
+.modal-price-box {
+    background-color: #f9fafb;
+    border: 1px solid #eee;
+    border-radius: 6px;
+    padding: 15px;
+    margin-top: 10px;
+}
+
+.modal-meta {
+    font-size: 0.95em;
+    color: #555;
+}
+
+.modal-description {
+    font-size: 1em;
+    color: #444;
+    line-height: 1.6;
+    margin-top: 10px;
+    max-height: 200px;
+    overflow-y: auto; 
+}
+
+.modal-actions {
+    margin-top: auto; 
+    padding-top: 20px;
+}
+
+@media screen and (max-width: 768px) {
+    .modal-content {
+        width: 95%;
+        margin: 10% auto;
+        flex-direction: column;
+        height: auto;
+        max-height: 85vh;
+        overflow-y: auto;
+    }
+    .modal-body {
+        flex-direction: column;
+    }
+    .modal-left, .modal-right {
+        width: 100%;
+        border-right: none;
+        padding: 20px;
+    }
+    .modal-left img {
+        max-height: 250px;
+    }
+}

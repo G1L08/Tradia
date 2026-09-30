@@ -1,0 +1,93 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4; 
+}
+
+.Video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: 1; 
+    object-fit: cover;
+}
+
+.checkout-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    position: relative;
+    z-index: 10; 
+    padding: 20px;
+}
+
+.confirmation-box {
+    background-color: rgba(0, 30, 60, 0.95);
+    padding: 40px 30px;
+    border-radius: 10px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    max-width: 500px;
+    width: 100%;
+}
+
+.confirmation-box i {
+    font-size: 60px;
+    color: #4CAF50; 
+    margin-bottom: 25px;
+    border: 3px solid #4CAF50;
+    border-radius: 50%;
+    padding: 15px; 
+    display: inline-block;
+}
+
+.confirmation-box h2 {
+    color: #ffffff;
+    margin-bottom: 10px;
+    font-size: 2.2em;
+    font-weight: 700;
+}
+
+
+.confirmation-box p {
+    color: #ffffff;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    font-size: 1.1em;
+}
+
+
+.confirmation-box p strong {
+    color: #333;
+    font-size: 1.2em;
+}
+
+
+
+.btn-volver {
+    display: inline-block;
+    background-color: #007bff; 
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1em;
+    letter-spacing: 0.5px;
+    transition: background-color 0.3s ease, transform 0.1s;
+}
+
+.btn-volver:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+.btn-volver:active {
+    transform: translateY(0);
+}
